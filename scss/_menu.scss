@@ -2,8 +2,8 @@
 .menu-btn{
     position: absolute;
     z-index: 3;
-    right: 55px;
-    top: 55px;
+    right: 35px;
+    top: 35px;
     cursor: pointer;
     @include easeOut;
 
@@ -92,7 +92,7 @@
             width: 250px;
             height: 250px;
             background: url('../img/portrait.jpg');
-            border-raius: 50%;
+            border-radius: 50%;
             border: solid 3px $secondary-color;
         }
     }
@@ -129,8 +129,8 @@
 
 // Delay each nav item slide by 0.1s
 // for(x=0; x < 4; x++)
-@for $x from 1 through 4{
-    .nav-item: nth-child(#{$x}){
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}){
         transition-delay: $x * 0.1s;
     }
 
