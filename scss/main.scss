@@ -1,5 +1,7 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
+
 * {
     box-sizing: border-box;
 }
@@ -30,7 +32,10 @@ h3 {
         background: rgba(lighten($primary-color, 2), 0.2);
     }
 }
-
+/*  Had trouble getting social-media icons to update with the proper css (below).
+    Turns out I had my a, header, and .text-secondary code inside the above h1-h3 styling block as well as imporperly indented.
+    Remember that css responds to indentation!!!
+*/
 a {
     color: #fff;
     text-decoration: none;
