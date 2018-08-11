@@ -11,7 +11,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include easeOut;
     }
 
@@ -22,17 +22,18 @@
         .btn-line{
             // Line 1 - Rotate
             &:nth-child(1){
-                //background: red;
+                //background: $secondary-color;
                 transform: rotate(45deg) translate(5px, 5px);
             }
 
             // Line 2 - Hide
             &:nth-child(2){
                 //background: red;
-                opacity: 0;            }
+                opacity: 0;
+            }
             // Line 3 - Rotate
             &:nth-child(3){
-                //background: red;
+                //background: $secondary-color;
                 transform: rotate(-45deg) translate(7px, -6px);
             }
         }
@@ -45,15 +46,16 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    //opacity: 0.9;
     visibility: hidden;
 
+    // & adds classes to parent class (menu)
     &.show{
         visibility: visible;
     }
 
     &-branding, &-nav{
-        display: flex;
+        display: flex; // CSS Flexbox - position list items vertically rather than horizontally
         flex-flow: column wrap;
         align-items: center;
         justify-content: center;
@@ -78,6 +80,7 @@
         }
     }
 
+    // Branding Side (left half with image)
     &-branding{
         background: $primary-color;
         transform: translate3d(0, 100%, 0);
@@ -94,18 +97,20 @@
             background: url('../img/portrait.jpg');
             border-radius: 50%;
             border: solid 3px $secondary-color;
+
         }
     }
 
     .nav-item{
         transform: translate3d(600px, 0, 0);
+
         @include easeOut;
 
         // Slide in from the right
         &.show{
             transform: translate3d(0, 0, 0);
         }
-
+        // Style link of current page's color
         &.current > a {
             color: $secondary-color;
         }
@@ -118,7 +123,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color: #fff;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
         &:hover{
@@ -127,7 +132,7 @@
     }
 }
 
-// Delay each nav item slide by 0.1s
+// Delay each nav item slide by 0.1s individually
 // for(x=0; x < 4; x++)
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}){
