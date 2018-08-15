@@ -132,6 +132,14 @@
     }
 }
 
+.hide{
+    visibility: hidden;
+}
+
+.display{
+    visibility: visible;
+}
+
 // Delay each nav item slide by 0.1s individually
 // for(x=0; x < 4; x++)
 @for $x from 1 through 4 {
