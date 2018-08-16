@@ -1,5 +1,5 @@
 // Select DOM Items
-var menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
@@ -12,6 +12,7 @@ let showMenu = false;
 
 
 menuBtn.addEventListener("click", toggleMenu);
+menuBtn.addEventListener("click", hideImage);
 
 /*if (!hiddenPortrait) {
     hideImage();
@@ -55,7 +56,7 @@ function toggleMenu() {
     }
     /*ROADBLOCK - GET http://127.0.0.1:3000/dist/js/main.js/ 404 (Not Found)
     (index):1 Refused to execute script from 'http://127.0.0.1:3000/dist/js/main.js/' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. - 8/8/2018
-      FIX - move main.js out of js folder into dist with index.html 8/10/2018*/
+      FIX - move main.js out of js folder into dist with index.html - 8/10/2018*/
 }
 
 function menuClick() {
@@ -64,8 +65,11 @@ function menuClick() {
 }
 
 function hideImage() {
-    document.getElementById('btn').onclick = function() {
-        document.getElementById('myPortrait').className = "hide";
+    let hide = document.getElementById("myPortrait");
+    if (hide.style.visibility === "hidden") {
+        hide.style.visibility = "visible";
+    } else {
+        hide.style.visibility = "hidden";
     }
 }
 
