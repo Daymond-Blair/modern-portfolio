@@ -19,12 +19,48 @@ $background-opacity: 0.9;
                 top: 0;
                 right: 0;
                 width: 100%;
-                height: 100%;
+                height: 100vh;
                 z-index: -1;
                 background: rgba($primary-color, $background-opacity);
             }
         }
     }
+}
+
+// no scroll bar
+@mixin no-scroll-bar() {
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
+}
+
+// custom scroll-bar
+@mixin custom-scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
 }
 
 // Set Text color
