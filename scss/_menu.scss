@@ -146,5 +146,4 @@
     .nav-item:nth-child(#{$x}){
         transition-delay: $x * 0.1s;
     }
-
 }

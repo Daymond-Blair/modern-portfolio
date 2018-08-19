@@ -11,7 +11,8 @@ body {
     @include background;
     background: $primary-color;
     color: set-text-color($primary-color);
-    height: 100% margin 0;
+    height: 100%;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Veranda, sans-serif;
     line-height: 1.5;
     overflow: visible;
@@ -65,7 +66,7 @@ main {
 
         a {
             padding: 0.4rem;
-
+            // a:hover
             &:hover {
                 color: $secondary-color;
                 @include easeOut();
@@ -74,21 +75,21 @@ main {
     }
 
     &#home {
-        //overflow: hidden;
-
+        overflow: hidden;
 
         h1 {
-            margin-top: 20vh; //viewport height = horizontal lines viewport width = vertical lines
+            margin-top: 20vh; // viewport height = horizontal lines viewport width = vertical lines
+        }
+    }
+
+    &#about {
+        padding: 0px 64px 16px 64px;
+        h2{
+            margin: 0px 0px 16px 0px;
         }
     }
 }
 
-/*#wrapper{
-    height: 100vh;
-}
-.about{
-height: 100%;
-}*/
 
 .about-info{
     display: grid;
@@ -207,7 +208,7 @@ height: 100%;
     padding: 1rem;
     background: darken($primary-color, 10);
     color: set-text-color($primary-color);
-
+    height: 60px;
 }
 
 
