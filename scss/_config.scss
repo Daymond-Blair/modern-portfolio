@@ -26,7 +26,7 @@ $background-opacity: 0.9;
         }
     }
 }
-
+/*
 // no scroll bar
 @mixin no-scroll-bar() {
   &::-webkit-scrollbar {
@@ -62,7 +62,7 @@ $background-opacity: 0.9;
     border-radius: 10px;
   }
 }
-
+*/
 // Set Text color
 @function set-text-color($color){
     @if (lightness($color) > 40){
