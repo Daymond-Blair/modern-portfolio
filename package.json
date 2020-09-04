@@ -6,7 +6,7 @@
     "homepage": "https://Daymond-Blair.github.io/modern-portfolio",
     "dependencies": {
         "gh-pages": "^1.2.0",
-        "node-sass": "^4.9.2"
+        "node-sass": "^4.13.1"
     },
     "devDependencies": {},
     "scripts": {
